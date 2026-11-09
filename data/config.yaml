@@ -1,0 +1,20 @@
+# Packeton local configuration, mounted at /data/config.yaml.
+# Declares composer proxy/mirror repositories.
+# Docs: https://github.com/vtsykun/packeton/blob/master/docs/usage/mirroring.md
+
+packeton:
+    mirrors:
+        # Full proxy of packagist.org (metadata + dist zipballs)
+        packagist:
+            url: https://repo.packagist.org
+
+        # Restricted proxies: only yii2 / symfony packages
+        yii2:
+            url: https://repo.packagist.org
+            available_package_patterns:
+                - 'yiisoft/yii2*'
+
+        symfony:
+            url: https://repo.packagist.org
+            available_package_patterns:
+                - 'symfony/*'
