@@ -11,7 +11,8 @@ packeton:
             url: https://repo.packagist.org
             public_access: true
 
-        # Yii2 frontend assets (bower/npm packages)
+        # Yii2 frontend assets (bower/npm packages), on-demand metadata sync
         asset_packagist:
             url: https://asset-packagist.org
             public_access: true
+            sync_lazy: true
