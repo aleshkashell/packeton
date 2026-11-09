@@ -8,13 +8,6 @@ packeton:
         packagist:
             url: https://repo.packagist.org
 
-        # Restricted proxies: only yii2 / symfony packages
-        yii2:
-            url: https://repo.packagist.org
-            available_package_patterns:
-                - 'yiisoft/yii2*'
-
-        symfony:
-            url: https://repo.packagist.org
-            available_package_patterns:
-                - 'symfony/*'
+        # Yii2 frontend assets (bower/npm packages)
+        asset-packagist:
+            url: https://asset-packagist.org
