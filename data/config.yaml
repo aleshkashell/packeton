@@ -1,13 +1,17 @@
 # Packeton local configuration, mounted at /data/config.yaml.
 # Declares composer proxy/mirror repositories.
 # Docs: https://github.com/vtsykun/packeton/blob/master/docs/usage/mirroring.md
+# Note: Symfony config normalizes mirror names: "-" in keys becomes "_",
+# so the repository URL uses the normalized name (/mirror/asset_packagist).
 
 packeton:
     mirrors:
         # Full proxy of packagist.org (metadata + dist zipballs)
         packagist:
             url: https://repo.packagist.org
+            public_access: true
 
         # Yii2 frontend assets (bower/npm packages)
-        asset-packagist:
+        asset_packagist:
             url: https://asset-packagist.org
+            public_access: true
